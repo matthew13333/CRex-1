@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1500&q=80') no-repeat  ;
+  height: 100vh;
+  overflow-x: hidden;
+  color: rgb(255, 255, 255);
+  min-height: 2000px;
+  background-color: black;
+}
+
+/* Tombol toggle */
+#tombol-btn {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 24px;
+  background-color: rgba(30, 30, 30, 0.6);
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 1001;
+  backdrop-filter: blur(5px);
+}
+
+#tombol-btn:hover {
+  background-color: rgba(50, 50, 50, 0.7);
+}
+
+/* Sidebar overlay */
+.sidebar {
+  width: 240px;
+  height: 100vh;
+  background: rgba(20, 20, 20, 0.6);
+  backdrop-filter: blur(12px);
+  position: fixed;
+  top: 0;
+  left: -270px; /* sembunyikan dulu */
+  transition: left 0.3s ease;
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  z-index: 1000;
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.sidebar ul li a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Saat aktif, muncul ke depan */
+.sidebar.show {
+  left: 0;
+}
+
+/* Konten utama tetap */
+.content {
+  position: relative;
+  z-index: 1;
+  padding: 60px 20px;
+  transition: filter 0.3s ease;
+}
+
+/* Efek blur konten saat sidebar terbuka */
+.content.blurred {
+  filter: blur(4px);
+}
+
+/* M */
+.tulisan{
+  margin-left: 80px;
+}
+
+#judul{
+  text-align: center;
+  color: pink;
+  text-shadow: 2px 2px 4px black;
+  font-size: 45px;
+}
+
+#isi{
+  text-shadow: 2px 2px 4px black;
+  font-size: 25px;
+  color: white;
+}
